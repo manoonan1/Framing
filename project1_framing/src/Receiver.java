@@ -21,7 +21,7 @@ public class Receiver {
         for (int i = 0; i < message.length(); i++) {
             if (message.charAt(i) == '1'){
                 oneCount++;
-                if(oneCount == 6){
+                if(oneCount == 5){
                     message = message.substring(0, i) + "" + message.substring(i, message.length());
                     oneCount = 0;
                 }
@@ -47,7 +47,7 @@ public class Receiver {
         Scanner in = new Scanner(System.in);
         String message = in.nextLine();
         int byteNumber = (int) message.charAt(0);
-        if (byteNumber != message.substring(1).length() + 1){
+        if (Integer.valueOf(byteNumber) != message.substring(1).length() + 1){
             System.out.println("The received frame has an error!");
             return;
         }
