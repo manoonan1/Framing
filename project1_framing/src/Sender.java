@@ -1,3 +1,5 @@
+//Michael Noonan Project 1 CS 327 Section 1
+
 import java.util.Scanner;
 
 public class Sender {
